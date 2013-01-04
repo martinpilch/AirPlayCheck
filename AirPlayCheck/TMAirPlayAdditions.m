@@ -34,10 +34,6 @@ void RouteChangePropertyListener (
   [additions isAirPlayVideoAvailable];
   [additions isAirPlayConnected];
   
-  if ( [additions.delegate respondsToSelector:@selector(airPlayConnectivityChangedWithAirPlay:airPlayVideo:)] ) {
-    [additions.delegate airPlayConnectivityChangedWithAirPlay:additions.airPlayConnected airPlayVideo:additions.airPlayVideoAvailable];
-  }
-  
   if ( additions.airPlayConnected ) {
     [[NSNotificationCenter defaultCenter] postNotificationName:kAirPlayDeviceConnectedNotification object:nil];
   } else {

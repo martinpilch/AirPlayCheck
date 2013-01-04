@@ -25,20 +25,11 @@
 #define kAirPlayDeviceConnectedNotification @"kAirPlayDeviceConnectedNotification"
 #define kAirPlayDeviceDisconnectedNotification @"kAirPlayDeviceDisconnectedNotification"
 
-@protocol TMAirPlayAdditionsDelegate;
-
 @interface TMAirPlayAdditions : NSObject
 
 @property (assign, nonatomic, getter = isAirPlayConnected) BOOL airPlayConnected;
 @property (assign, nonatomic, getter = isAirPlayVideoAvailable) BOOL airPlayVideoAvailable;
-@property (assign) id<TMAirPlayAdditionsDelegate> delegate;
 
 + (TMAirPlayAdditions*)sharedInstance;
-
-@end
-
-@protocol TMAirPlayAdditionsDelegate <NSObject>
-
-- (void)airPlayConnectivityChangedWithAirPlay:(BOOL)airPlay airPlayVideo:(BOOL)airPlayVideo;
 
 @end
