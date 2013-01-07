@@ -20,20 +20,39 @@
  THE SOFTWARE.
  */
 
-#import "APAppDelegate.h"
+#import "APView.h"
+#import <MediaPlayer/MediaPlayer.h>
 
-#import "APViewController.h"
+@interface APView () {
+  MPVolumeView *_volumeView;
+}
 
-@implementation APAppDelegate
+@end
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+@implementation APView
+
+- (id)init
 {
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  self.viewController = [[APViewController alloc] init];
-  self.window.rootViewController = self.viewController;
-  [self.window makeKeyAndVisible];
-  return YES;
+  self = [super init];
+  if (self) {
+    _volumeView = [[MPVolumeView alloc] init];
+    _volumeView.showsVolumeSlider = NO;
+    [self addSubview:_volumeView];
+  }
+  return self;
+}
+
+- (void)layoutSubviews {
+  
+  [super layoutSubviews];
+  
+  CGRect frame;
+  frame.size = CGSizeMake(100, 100);
+  frame.origin = CGPointMake((CGRectGetWidth(self.bounds) - CGRectGetWidth(frame)) / 2,
+                             (CGRectGetHeight(self.bounds) - CGRectGetHeight(frame)) / 2);
+  if (!CGRectEqualToRect(_volumeView.frame, frame)) {
+    _volumeView.frame = frame;
+  }
 }
 
 @end

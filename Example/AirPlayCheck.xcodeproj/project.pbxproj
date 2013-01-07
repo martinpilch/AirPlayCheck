@@ -17,11 +17,11 @@
 		8FCA8347169AC6CB00D0337A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA8346169AC6CB00D0337A /* Default@2x.png */; };
 		8FCA8349169AC6CB00D0337A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA8348169AC6CB00D0337A /* Default-568h@2x.png */; };
 		8FCA834C169AC6CB00D0337A /* APViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA834B169AC6CB00D0337A /* APViewController.m */; };
-		8FCA834F169AC6CB00D0337A /* APViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA834D169AC6CB00D0337A /* APViewController.xib */; };
 		8FCA8356169AC80400D0337A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA8355169AC80400D0337A /* MediaPlayer.framework */; };
 		8FCA8362169ACACB00D0337A /* TMAirPlayAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA8361169ACACB00D0337A /* TMAirPlayAdditions.m */; };
 		8FCA8365169ACC0500D0337A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA8364169ACC0500D0337A /* AVFoundation.framework */; };
 		8FCA8367169ACC4600D0337A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCA8366169ACC4600D0337A /* AudioToolbox.framework */; };
+		8FCA836A169AD0E000D0337A /* APView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA8369169AD0E000D0337A /* APView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +40,13 @@
 		8FCA8348169AC6CB00D0337A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8FCA834A169AC6CB00D0337A /* APViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APViewController.h; sourceTree = "<group>"; };
 		8FCA834B169AC6CB00D0337A /* APViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APViewController.m; sourceTree = "<group>"; };
-		8FCA834E169AC6CB00D0337A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/APViewController.xib; sourceTree = "<group>"; };
 		8FCA8355169AC80400D0337A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		8FCA8360169ACACB00D0337A /* TMAirPlayAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAirPlayAdditions.h; path = ../../AirPlayCheck/TMAirPlayAdditions.h; sourceTree = "<group>"; };
 		8FCA8361169ACACB00D0337A /* TMAirPlayAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAirPlayAdditions.m; path = ../../AirPlayCheck/TMAirPlayAdditions.m; sourceTree = "<group>"; };
 		8FCA8364169ACC0500D0337A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8FCA8366169ACC4600D0337A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8FCA8368169AD0E000D0337A /* APView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APView.h; sourceTree = "<group>"; };
+		8FCA8369169AD0E000D0337A /* APView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +104,8 @@
 				8FCA8342169AC6CB00D0337A /* APAppDelegate.m */,
 				8FCA834A169AC6CB00D0337A /* APViewController.h */,
 				8FCA834B169AC6CB00D0337A /* APViewController.m */,
-				8FCA834D169AC6CB00D0337A /* APViewController.xib */,
+				8FCA8368169AD0E000D0337A /* APView.h */,
+				8FCA8369169AD0E000D0337A /* APView.m */,
 				8FCA8339169AC6CB00D0337A /* Supporting Files */,
 			);
 			path = AirPlayCheck;
@@ -188,7 +190,6 @@
 				8FCA8345169AC6CB00D0337A /* Default.png in Resources */,
 				8FCA8347169AC6CB00D0337A /* Default@2x.png in Resources */,
 				8FCA8349169AC6CB00D0337A /* Default-568h@2x.png in Resources */,
-				8FCA834F169AC6CB00D0337A /* APViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +204,7 @@
 				8FCA8343169AC6CB00D0337A /* APAppDelegate.m in Sources */,
 				8FCA834C169AC6CB00D0337A /* APViewController.m in Sources */,
 				8FCA8362169ACACB00D0337A /* TMAirPlayAdditions.m in Sources */,
+				8FCA836A169AD0E000D0337A /* APView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,14 +217,6 @@
 				8FCA833C169AC6CB00D0337A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		8FCA834D169AC6CB00D0337A /* APViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FCA834E169AC6CB00D0337A /* en */,
-			);
-			name = APViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -281,10 +275,13 @@
 		8FCA8353169AC6CB00D0337A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirPlayCheck/AirPlayCheck-Prefix.pch";
 				INFOPLIST_FILE = "AirPlayCheck/AirPlayCheck-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -292,10 +289,13 @@
 		8FCA8354169AC6CB00D0337A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AirPlayCheck/AirPlayCheck-Prefix.pch";
 				INFOPLIST_FILE = "AirPlayCheck/AirPlayCheck-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -20,20 +20,8 @@
  THE SOFTWARE.
  */
 
-#import "APAppDelegate.h"
+#import <UIKit/UIKit.h>
 
-#import "APViewController.h"
-
-@implementation APAppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  // Override point for customization after application launch.
-  self.viewController = [[APViewController alloc] init];
-  self.window.rootViewController = self.viewController;
-  [self.window makeKeyAndVisible];
-  return YES;
-}
+@interface APView : UIView
 
 @end
