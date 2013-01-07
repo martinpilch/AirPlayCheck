@@ -30,6 +30,6 @@
 @property (assign, nonatomic, getter = isAirPlayConnected) BOOL airPlayConnected;
 @property (assign, nonatomic, getter = isAirPlayVideoAvailable) BOOL airPlayVideoAvailable;
 
-+ (TMAirPlayAdditions*)sharedInstance;
++ (void)initSharedInstance;
 
 @end

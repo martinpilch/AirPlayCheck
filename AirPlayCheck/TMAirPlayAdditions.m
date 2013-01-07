@@ -123,7 +123,7 @@ void RouteChangePropertyListener (
 #pragma mark -
 #pragma mark Singleton
 
-+ (TMAirPlayAdditions*)sharedInstance; {
++ (void)initSharedInstance {
   
   static dispatch_once_t pred;
   static TMAirPlayAdditions *sharedInstance = nil;
@@ -131,7 +131,6 @@ void RouteChangePropertyListener (
   dispatch_once(&pred, ^{
     sharedInstance = [[TMAirPlayAdditions alloc] init];
   });
-  return sharedInstance;
 }
 
 @end
