@@ -107,9 +107,7 @@ void RouteChangePropertyListener (
   if ( outputs.count > 0 ) {
     //get audio output
     NSDictionary *output = outputs.lastObject;
-#ifdef DEBUG
-    NSLog(@"\n\n Device: %@ \n\n", output[ (NSString*)kAudioSession_AudioRouteKey_Type ]);
-#endif
+    
     if ( [output[ (NSString*)kAudioSession_AudioRouteKey_Type ] isEqualToString:(NSString *)kAudioSessionOutputRoute_AirPlay]) {
       _airPlayConnected = YES;
       CFRelease(dict);
