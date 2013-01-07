@@ -29,7 +29,7 @@ void RouteChangePropertyListener (
                          UInt32                    inDataSize,
                          const void                *inData
                          ) {
-  TMAirPlayAdditions *additions = (TMAirPlayAdditions *)inClientData;
+  TMAirPlayAdditions *additions = (__bridge TMAirPlayAdditions *)inClientData;
   
   [additions isAirPlayVideoAvailable];
   [additions isAirPlayConnected];
@@ -47,7 +47,7 @@ void RouteChangePropertyListener (
   self = [super init];
   if ( self ) {
     
-    AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, RouteChangePropertyListener, self);
+    AudioSessionAddPropertyListener(kAudioSessionProperty_AudioRouteChange, RouteChangePropertyListener, (__bridge void *)self);
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     [center addObserver:self selector:@selector(handleScreenDidConnectNotification:)
@@ -63,13 +63,12 @@ void RouteChangePropertyListener (
 
 - (void)dealloc {
   
-  AudioSessionRemovePropertyListenerWithUserData(kAudioSessionProperty_AudioRouteChange, RouteChangePropertyListener, self);
+  AudioSessionRemovePropertyListenerWithUserData(kAudioSessionProperty_AudioRouteChange, RouteChangePropertyListener, (__bridge void *)self);
   
   NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
   [center removeObserver:self name:UIScreenDidConnectNotification object:nil];
   [center removeObserver:self name:UIScreenDidDisconnectNotification object:nil];
   
-  [super dealloc];
 }
 
 #pragma mark -
@@ -103,7 +102,7 @@ void RouteChangePropertyListener (
   UInt32 propertySize = sizeof(dict);
   AudioSessionGetProperty(kAudioSessionProperty_AudioRouteDescription, &propertySize, &dict);
   
-  NSDictionary *params = (NSDictionary*)dict;
+  NSDictionary *params = (__bridge NSDictionary*)dict;
   NSArray *outputs = params[ (NSString*)kAudioSession_AudioRouteKey_Outputs ];
   if ( outputs.count > 0 ) {
     //get audio output
